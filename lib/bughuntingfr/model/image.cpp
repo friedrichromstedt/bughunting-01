@@ -47,7 +47,7 @@ int Image_getbuffer(PyObject* exporter, Py_buffer* view, int flags) {
     view->obj = exporter;
     view->buf = imobj->data;
     view->itemsize = sizeof(double);
-    view->format = "d";
+    view->format = (char*)"d";
     view->ndim = 2;
     view->len = sizeof(double) * \
         imobj->nColumns * imobj->nRows;
