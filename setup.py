@@ -13,10 +13,18 @@ modelmodule = Extension(
     ],
 )
 
+singlemodule = Extension(
+    'bughuntingfrmod',
+    sources=['lib/bughuntingfrmod/bughuntingfrmod.cpp'],
+)
+
 setup(
     name='bughuntingfr',
     version='0.1.0',
-    ext_modules=[modelmodule],
+    ext_modules=[
+        modelmodule,
+        singlemodule,
+    ],
     package_dir={'': 'lib'},
     packages=['bughuntingfr'],
 )
